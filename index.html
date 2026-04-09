@@ -147,8 +147,19 @@
             var dzzzId = $('#dzzzId').val();
             if (dzzzId != null && dzzzId != '') {
                 $('#eDiv1').show();
-                // 唯一新增的一行：强制滚动到顶部
-                window.scrollTo(0, 0);
+
+                // 强制滚动到顶部（增强版）
+                setTimeout(function() {
+                    window.scrollTo(0, 0);
+                    document.documentElement.scrollTop = 0;
+                    document.body.scrollTop = 0;
+                }, 100);
+
+                setTimeout(function() {
+                    window.scrollTo(0, 0);
+                    document.documentElement.scrollTop = 0;
+                    document.body.scrollTop = 0;
+                }, 500);
             } else {
                 $('#eDiv2').show();
             }

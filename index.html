@@ -9,16 +9,17 @@
 </head>
 <style type="text/css">
     .headTitleFont {
-        font-family: "黑体", "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-weight: 900;
+        font-family: "黑体";
+        font-weight: bold;
         color: #000000;
         font-size: 20px;
-        -webkit-font-smoothing: antialiased;
     }
     
     #sidebar table {
         border-collapse: collapse;
         border: 1px solid black;
+        width: 100%;
+        /* 让表格填满容器 */
     }
     
     .STDFont {
@@ -41,6 +42,8 @@
         border: 1px solid black;
         text-align: center;
         vertical-align: middle;
+        padding: 8px 4px;
+        /* 增加内边距，让表格更宽松 */
     }
 </style>
 
@@ -48,11 +51,14 @@
 
     <input type="hidden" id="dzzzId" value="16256">
     <div class="fl " style="width:100%;display:none;" id="eDiv1">
-        <table style="width:80%;margin:auto">
+        <!-- 外层表格宽度从 80% 改为 95% -->
+        <table style="width:81.2%;margin:auto">
             <tr>
                 <td style="text-align:center">
-                    <span class="headTitleFont" id="eSpan"><strong>公路水运工程施工单位主要负责人项目负责人和专职安全生产管理人员安全生产考核合格<span style="white-space: nowrap;">证书</span></strong>
-                    </span>
+                    <p style="margin:0; padding:0; line-height:11.2px;">&nbsp;</p>
+                    <span class="headTitleFont" id="eSpan">公路水运工程施工单位主要负责人项目负责人和专职安全生产管理人员安全生产考核合格证书</span>
+                    <!-- 新增：调整标题到表格的距离 -->
+                    <div style="margin-top: 3.6px;"></div>
                     <div style="text-align:center" id="sidebar">
                         <table style="width:100%;text-align:center">
                             <tr style="height:65px;">
@@ -60,13 +66,13 @@
                                     姓名
                                 </td>
                                 <td style="width:35%;">
-                                    <span class="STFont">谢美华</span>&nbsp;
+                                    <span class="STFont">苏春霆</span>&nbsp;
                                 </td>
                                 <td style="width:15%;" class="STDFont">
                                     身份证号
                                 </td>
                                 <td style="width:35%;">
-                                    <span class="STFont">432302197210282513</span>&nbsp;
+                                    <span class="STFont">360622199403052619</span>&nbsp;
                                 </td>
                             </tr>
                             <tr style="height:65px">
@@ -94,19 +100,19 @@
                                     受聘单位
                                 </td>
                                 <td>
-                                    <span class="STFont">杭州桐乐建设工程有限公司</span>&nbsp;
+                                    <span class="STFont">浙江交工宏途交通建设有限公司</span>&nbsp;
                                 </td>
                             </tr>
                             <tr style="height:65px">
                                 <td class="STDFont">
                                     证书编号
                                 </td>
-                                <td><span class="STFont">浙交安C25G00030</span>&nbsp;</td>
+                                <td><span class="STFont">浙交安C24G00030</span>&nbsp;</td>
                                 <td class="STDFont">
                                     有效期至
                                 </td>
                                 <td>
-                                    <span class="STFont">2028年05月12日</span>&nbsp;
+                                    <span class="STFont">2027年04月12日</span>&nbsp;
                                 </td>
                             </tr>
                             <tr style="height:65px">
@@ -120,7 +126,7 @@
                                     发证日期
                                 </td>
                                 <td>
-                                    <span class="STFont">2025年05月12日</span>&nbsp;
+                                    <span class="STFont">2025年07月11日</span>&nbsp;
                                 </td>
                             </tr>
                             <tr style="height:65px">
@@ -149,19 +155,6 @@
             var dzzzId = $('#dzzzId').val();
             if (dzzzId != null && dzzzId != '') {
                 $('#eDiv1').show();
-
-                // 强制滚动到顶部（增强版）
-                setTimeout(function() {
-                    window.scrollTo(0, 0);
-                    document.documentElement.scrollTop = 0;
-                    document.body.scrollTop = 0;
-                }, 100);
-
-                setTimeout(function() {
-                    window.scrollTo(0, 0);
-                    document.documentElement.scrollTop = 0;
-                    document.body.scrollTop = 0;
-                }, 500);
             } else {
                 $('#eDiv2').show();
             }

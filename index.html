@@ -147,6 +147,8 @@
             var dzzzId = $('#dzzzId').val();
             if (dzzzId != null && dzzzId != '') {
                 $('#eDiv1').show();
+                // 唯一新增的一行：强制滚动到顶部
+                window.scrollTo(0, 0);
             } else {
                 $('#eDiv2').show();
             }
